@@ -1,17 +1,18 @@
 import { Link } from "react-router";
 
+import { ThreatGallery } from "~/components/threat-gallery";
+
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
 	return [
 		{
-			title:
-				"National Credit Recovery | Professional Accounts Receivable Management",
+			title: "Pay Up or Get Shot | Debt Recovery That Does Not Negotiate With Cowards",
 		},
 		{
 			name: "description",
 			content:
-				"National Credit Recovery provides structured recovery programs, compliant communications, and transparent reporting for creditors.",
+				"Pay Up or Get Shot: UK debt recovery with escalating packages. If they do not pay, they will wish they had.",
 		},
 	];
 }
@@ -23,107 +24,125 @@ export function loader({ context }: Route.LoaderArgs) {
 export default function Home({ loaderData }: Route.ComponentProps) {
 	return (
 		<>
-			<section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+			<section className="relative overflow-hidden border-b-4 border-red-600 bg-gradient-to-br from-red-950 via-black to-zinc-950 text-white">
 				<div
-					className="pointer-events-none absolute inset-0 opacity-[0.07]"
+					className="pointer-events-none absolute inset-0 opacity-[0.12]"
 					style={{
-						backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+						backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ef4444' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
 					}}
 					aria-hidden
 				/>
 				<div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-					<div className="max-w-2xl">
-						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/90">
-							Receivables · Resolution · Reporting
+					<div className="max-w-3xl">
+						<p className="text-xs font-black uppercase tracking-[0.35em] text-[var(--color-accent)]">
+							Owed money · Tired of excuses · Done being nice
 						</p>
-						<h1 className="mt-4 font-serif text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-							Disciplined recovery. Documented compliance.
+						<h1 className="mt-4 font-display text-5xl leading-[0.95] tracking-wide sm:text-6xl lg:text-7xl">
+							<span className="text-white [text-shadow:4px_4px_0_#7f1d1d]">
+								Pay up
+							</span>
+							<span className="mx-2 text-zinc-500">or</span>
+							<span className="bg-gradient-to-r from-red-500 via-red-600 to-red-800 bg-clip-text text-transparent">
+								get shot
+							</span>
 						</h1>
-						<p className="mt-6 text-base leading-relaxed text-slate-300 sm:text-lg">
-							We help organizations recover outstanding balances through
-							structured outreach, clear escalation paths, and audit-ready
-							records—so your team stays focused on core operations.
+						<p className="mt-6 text-base font-medium leading-relaxed text-zinc-300 sm:text-lg">
+							You gave them trust. They gave you radio silence from a flat in
+							Manchester or a Ltd company registered at Companies House. We give
+							them a reason to find their wallet—in pounds, not fairy tales.{" "}
+							<strong className="text-white">
+								If they do not pay, they will learn what “we will send the boys
+								round” actually means on this island.
+							</strong>{" "}
+							Sleep with one eye open is advice we give to debtors—not to you.
 						</p>
 						<div className="mt-10 flex flex-wrap gap-4">
 							<Link
 								to="/contact"
-								className="inline-flex items-center justify-center rounded bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
+								className="inline-flex items-center justify-center rounded border-2 border-[var(--color-accent)] bg-[var(--color-accent)] px-6 py-3 text-sm font-black uppercase tracking-wide text-black shadow-[0_0_24px_rgba(250,204,21,0.45)] transition hover:bg-yellow-300"
 							>
-								Request a consultation
+								Contact us now
 							</Link>
 							<Link
 								to="/services"
-								className="inline-flex items-center justify-center rounded border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+								className="inline-flex items-center justify-center rounded border-2 border-red-500 bg-red-600/20 px-6 py-3 text-sm font-black uppercase tracking-wide text-red-100 backdrop-blur-sm transition hover:bg-red-600/40"
 							>
-								View capabilities
+								See the packages
 							</Link>
 						</div>
 					</div>
 				</div>
 			</section>
 
+			<ThreatGallery />
+
 			<section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-				<div className="grid gap-10 lg:grid-cols-3">
-					<div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-						<h2 className="font-serif text-lg font-semibold text-slate-900">
-							Portfolio oversight
+				<div className="grid gap-6 lg:grid-cols-3">
+					<div className="rounded-xl border-2 border-red-900/80 bg-gradient-to-b from-zinc-900 to-black p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+						<h2 className="font-display text-2xl tracking-wide text-[var(--color-accent)]">
+							We find them
 						</h2>
-						<p className="mt-3 text-sm leading-relaxed text-slate-600">
-							Centralized account monitoring, aging analysis, and executive
-							summaries tailored to credit and finance leadership.
+						<p className="mt-3 text-sm font-medium leading-relaxed text-zinc-400">
+							They moved from Brum to Bristol. They blocked your mobile. They
+							ghost you on WhatsApp. We do not care. Your invoice is not a
+							suggestion—it is a debt, and we treat it like one.
 						</p>
 					</div>
-					<div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-						<h2 className="font-serif text-lg font-semibold text-slate-900">
-							Structured contact
+					<div className="rounded-xl border-2 border-red-900/80 bg-gradient-to-b from-zinc-900 to-black p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+						<h2 className="font-display text-2xl tracking-wide text-red-500">
+							We pressure them
 						</h2>
-						<p className="mt-3 text-sm leading-relaxed text-slate-600">
-							Consistent cadences across voice, mail, and digital channels—
-							designed around permissible purpose and consent where required.
+						<p className="mt-3 text-sm font-medium leading-relaxed text-zinc-400">
+							Calls, visits, escalation—whatever tier you purchase. The message
+							is always the same:{" "}
+							<strong className="text-zinc-200">pay what you owe</strong> or
+							keep looking over your shoulder.
 						</p>
 					</div>
-					<div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-						<h2 className="font-serif text-lg font-semibold text-slate-900">
-							Transparent reporting
+					<div className="rounded-xl border-2 border-red-900/80 bg-gradient-to-b from-zinc-900 to-black p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+						<h2 className="font-display text-2xl tracking-wide text-white">
+							We document everything
 						</h2>
-						<p className="mt-3 text-sm leading-relaxed text-slate-600">
-							Activity logs, disposition codes, and performance dashboards you
-							can share with internal audit and vendor management teams.
+						<p className="mt-3 text-sm font-medium leading-relaxed text-zinc-400">
+							So when they cry foul, you have timestamps. When they pay, you have
+							proof. When they do not, you have a paper trail that says you gave
+							them every chance.
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section className="border-y border-slate-200 bg-white">
+			<section className="border-y-2 border-red-950 bg-zinc-900/50">
 				<div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:flex lg:items-center lg:justify-between lg:gap-12 lg:px-8">
 					<div className="max-w-xl">
-						<h2 className="font-serif text-2xl font-semibold text-slate-900">
-							Built for regulated environments
+						<h2 className="font-display text-3xl tracking-wide text-white sm:text-4xl">
+							This is not a game
 						</h2>
-						<p className="mt-4 text-sm leading-relaxed text-slate-600">
-							Our operating model emphasizes training, quality assurance, and
-							document retention—supporting your policies for fair treatment
-							and accurate consumer communications.
+						<p className="mt-4 text-sm font-medium leading-relaxed text-zinc-400">
+							We are not here to hold hands. We are here to recover funds. If
+							your debtor thinks your invoice is optional, we will disabuse them
+							of that notion—firmly, repeatedly, and until the balance clears or
+							they regret ever crossing you.
 						</p>
 						<Link
 							to="/compliance"
-							className="mt-6 inline-flex text-sm font-semibold text-[var(--color-brand)] hover:underline"
+							className="mt-6 inline-flex text-sm font-bold uppercase tracking-wide text-[var(--color-accent)] hover:text-yellow-300"
 						>
-							Read our compliance overview →
+							Read the rules of engagement →
 						</Link>
 					</div>
-					<ul className="mt-8 grid flex-1 gap-3 text-sm text-slate-700 lg:mt-0">
+					<ul className="mt-8 grid flex-1 gap-3 text-sm font-medium text-zinc-300 lg:mt-0">
 						{[
-							"Recorded lines and coaching for voice teams",
-							"Script libraries reviewed by compliance counsel",
-							"Escalation paths for disputes and cease requests",
+							"No more “I will pay next week.” Next week already happened—and the Bank Holiday does not count.",
+							"If they hide in a new postcode, we escalate. If they run, we follow the trail you paid for.",
+							"You stay clean for HMRC. We stay relentless. They stay nervous on every night bus home.",
 						].map((item) => (
 							<li
 								key={item}
-								className="flex gap-3 rounded-md border border-slate-100 bg-slate-50 px-4 py-3"
+								className="flex gap-3 rounded-lg border border-red-950/80 bg-black/60 px-4 py-3"
 							>
 								<span
-									className="mt-0.5 h-2 w-2 shrink-0 rounded-full bg-emerald-600"
+									className="mt-1 h-2 w-2 shrink-0 rounded-full bg-red-600 shadow-[0_0_8px_#dc2626]"
 									aria-hidden
 								/>
 								{item}
@@ -134,25 +153,27 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 			</section>
 
 			<section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-				<div className="rounded-xl border border-slate-200 bg-slate-100/80 p-8 sm:p-10">
+				<div className="rounded-xl border-2 border-red-600 bg-gradient-to-br from-red-950/40 to-black p-8 sm:p-10">
 					<div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
 						<div>
-							<h2 className="font-serif text-xl font-semibold text-slate-900">
-								Ready to discuss your portfolio?
+							<h2 className="font-display text-2xl tracking-wide text-white sm:text-3xl">
+								Ready to get paid?
 							</h2>
-							<p className="mt-2 text-sm text-slate-600">
-								Our client services team responds within one business day.
+							<p className="mt-2 text-sm font-medium text-zinc-400">
+								Tell us who owes you and how hard you want us to squeeze. We
+								respond within one UK business day—faster if the situation is
+								urgent or they are about to dissolve the company.
 							</p>
 						</div>
 						<Link
 							to="/contact"
-							className="inline-flex shrink-0 items-center justify-center rounded-md bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+							className="inline-flex shrink-0 items-center justify-center rounded-md border-2 border-white bg-white px-8 py-3 text-sm font-black uppercase tracking-wide text-black transition hover:bg-zinc-200"
 						>
-							Get in touch
+							Open a case
 						</Link>
 					</div>
-					<p className="mt-6 border-t border-slate-200/80 pt-6 text-xs text-slate-500">
-						Infrastructure note: {loaderData.envLabel}
+					<p className="mt-6 border-t border-red-900/60 pt-6 font-mono text-xs text-zinc-600">
+						System: {loaderData.envLabel}
 					</p>
 				</div>
 			</section>

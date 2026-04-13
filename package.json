@@ -1,7 +1,7 @@
 {
   "name": "payuporgetshot-web",
   "private": true,
-  "description": "National Credit Recovery marketing site (React Router 7 on Cloudflare Workers).",
+  "description": "Pay Up or Get Shot marketing site (React Router 7 on Cloudflare Workers).",
   "type": "module",
   "scripts": {
     "build": "react-router build",

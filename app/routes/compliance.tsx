@@ -2,11 +2,11 @@ import type { Route } from "./+types/compliance";
 
 export function meta({}: Route.MetaArgs) {
 	return [
-		{ title: "Compliance & Consumer Rights | National Credit Recovery" },
+		{ title: "Rules of Engagement | Pay Up or Get Shot" },
 		{
 			name: "description",
 			content:
-				"Information about fair treatment, dispute handling, and consumer rights in receivables management.",
+				"How Pay Up or Get Shot handles UK disputes, communications, and escalation boundaries.",
 		},
 	];
 }
@@ -14,54 +14,59 @@ export function meta({}: Route.MetaArgs) {
 export default function Compliance(_: Route.ComponentProps) {
 	return (
 		<div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
-			<p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
-				Compliance
+			<p className="text-xs font-black uppercase tracking-[0.3em] text-red-500">
+				Rules
 			</p>
-			<h1 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-				Commitment to fair, accurate treatment
+			<h1 className="mt-2 font-display text-4xl tracking-wide text-white sm:text-5xl">
+				What we will and will not do on paper
 			</h1>
-			<p className="mt-6 text-base leading-relaxed text-slate-600">
-				Professional receivables firms operate within a framework of federal and
-				state laws, regulatory guidance, and client policies. The following
-				summarizes how we think about those obligations in a production
-				environment.
+			<p className="mt-6 text-base font-medium leading-relaxed text-zinc-400">
+				Even we operate inside lines—some of them legal, some of them yours. The
+				summary below is how we keep your exposure controlled while we keep your
+				debtor uncomfortable.{" "}
+				<strong className="text-zinc-200">
+					Disputes do not erase debt; they trigger a different playbook.
+				</strong>
 			</p>
-			<div className="mt-10 space-y-8 text-sm leading-relaxed text-slate-600">
+			<div className="mt-10 space-y-8 text-sm font-medium leading-relaxed text-zinc-400">
 				<section>
-					<h2 className="font-serif text-lg font-semibold text-slate-900">
+					<h2 className="font-display text-2xl tracking-wide text-[var(--color-accent)]">
 						Validation & disputes
 					</h2>
 					<p className="mt-3">
-						Consumers who dispute a debt are entitled to clear timelines for
-						validation, investigation, and reporting outcomes to credit bureaus
-						where applicable. Our workflows route disputes to specialized teams
-						and preserve correspondence for audit.
+						If a debtor claims the debt is wrong, we route it to review—fast.
+						Documentation gets compared to your files and any UK court paperwork.
+						If they are lying to buy time, we document that too. Valid disputes
+						get fixed; bogus ones get pressure until payment or proof.
 					</p>
 				</section>
 				<section>
-					<h2 className="font-serif text-lg font-semibold text-slate-900">
-						Communication preferences
+					<h2 className="font-display text-2xl tracking-wide text-red-500">
+						Communication limits
 					</h2>
 					<p className="mt-3">
-						We maintain suppression lists, consent records, and channel
-						preferences so outreach respects consumer choice and regulatory
-						limits on frequency and time of day.
+						We track consent, do-not-contact flags, and channel preferences so
+						we do not hand your debtor a harassment claim in the County Court on a
+						silver platter. We can still be relentless inside the rules—just
+						smarter relentless.
 					</p>
 				</section>
 				<section>
-					<h2 className="font-serif text-lg font-semibold text-slate-900">
-						Training & monitoring
+					<h2 className="font-display text-2xl tracking-wide text-white">
+						Training & quality
 					</h2>
 					<p className="mt-3">
-						Agents receive recurring training on harassment standards,
-						mini-Miranda requirements, and state-specific rules. Calls are
-						sampled for quality and coaching.
+						Our people are trained on what to say, what not to say, and how to
+						escalate without giving the debtor a free pass. Calls get reviewed.
+						Scripts get tightened. If someone steps out of line, we correct it—
+						because a lost lawsuit helps nobody except the person who still owes
+						you money.
 					</p>
 				</section>
-				<p className="rounded-md border border-slate-200 bg-slate-50 p-4 text-xs text-slate-600">
-					This page is illustrative content for a fictional brand. It is not
-					legal advice. Consult qualified counsel for obligations that apply to
-					your organization.
+				<p className="rounded-md border border-zinc-700 bg-zinc-900/80 p-4 text-xs text-zinc-500">
+					This page describes operational intent, not legal advice. Retain
+					English or Scottish counsel if you need jurisdiction-specific guidance
+					within the UK.
 				</p>
 			</div>
 		</div>

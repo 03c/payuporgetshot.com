@@ -4,36 +4,36 @@ import type { Route } from "./+types/layout";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 	[
-		"text-sm font-medium transition-colors",
+		"text-sm font-bold uppercase tracking-wide transition-colors",
 		isActive
 			? "text-[var(--color-brand)]"
-			: "text-slate-600 hover:text-slate-900",
+			: "text-zinc-400 hover:text-[var(--color-accent)]",
 	].join(" ");
 
 export default function SiteLayout(_: Route.ComponentProps) {
 	return (
-		<div className="flex min-h-screen flex-col bg-slate-50 text-slate-900">
+		<div className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100">
 			<a
 				href="#main"
-				className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:shadow"
+				className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-black focus:px-3 focus:py-2 focus:text-white focus:ring-2 focus:ring-red-600"
 			>
 				Skip to main content
 			</a>
-			<header className="border-b border-slate-200/80 bg-white/90 backdrop-blur-sm">
+			<header className="border-b-4 border-red-600 bg-gradient-to-r from-black via-zinc-950 to-red-950/40 shadow-[0_0_40px_rgba(220,38,38,0.25)]">
 				<div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
 					<div className="flex items-center gap-3">
 						<div
-							className="flex h-10 w-10 items-center justify-center rounded border border-slate-200 bg-slate-900 text-xs font-semibold tracking-tight text-white"
+							className="flex h-12 w-12 shrink-0 items-center justify-center rounded border-2 border-[var(--color-accent)] bg-black font-display text-xl font-normal leading-none tracking-tight text-[var(--color-accent)] shadow-[0_0_20px_rgba(250,204,21,0.35)]"
 							aria-hidden
 						>
-							NCR
+							PUG
 						</div>
 						<div>
-							<p className="font-serif text-lg font-semibold tracking-tight text-slate-900">
-								National Credit Recovery
+							<p className="font-display text-2xl tracking-[0.02em] text-white [text-shadow:2px_2px_0_#7f1d1d] sm:text-3xl">
+								Pay Up or Get Shot
 							</p>
-							<p className="text-xs font-medium uppercase tracking-widest text-slate-500">
-								Accounts receivable management
+							<p className="text-[10px] font-bold uppercase tracking-[0.35em] text-red-400">
+								UK debt recovery · No excuses
 							</p>
 						</div>
 					</div>
@@ -45,10 +45,10 @@ export default function SiteLayout(_: Route.ComponentProps) {
 							Home
 						</NavLink>
 						<NavLink to="/services" className={navLinkClass}>
-							Services
+							Packages
 						</NavLink>
 						<NavLink to="/compliance" className={navLinkClass}>
-							Compliance
+							Rules
 						</NavLink>
 						<NavLink to="/about" className={navLinkClass}>
 							About
@@ -62,69 +62,79 @@ export default function SiteLayout(_: Route.ComponentProps) {
 			<main id="main" className="flex-1">
 				<Outlet />
 			</main>
-			<footer className="border-t border-slate-200 bg-white">
+			<footer className="border-t-2 border-red-900/80 bg-black">
 				<div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
 					<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 						<div className="lg:col-span-2">
-							<p className="font-serif text-base font-semibold text-slate-900">
-								National Credit Recovery, LLC
+							<p className="font-display text-xl tracking-wide text-white">
+								Pay Up or Get Shot
 							</p>
-							<p className="mt-2 max-w-md text-sm leading-relaxed text-slate-600">
-								A professional receivables firm serving creditors and
-								portfolio owners. This website is for demonstration
-								purposes only and does not represent a real collection
-								agency.
+							<p className="mt-2 max-w-md text-sm leading-relaxed text-zinc-400">
+								We collect what you are owed from deadbeats across England,
+								Scotland, Wales, and Northern Ireland. If they think a UK
+								invoice is optional, they are wrong.{" "}
+								<span className="font-semibold text-red-400">
+									Sleep with one eye open is not a metaphor here.
+								</span>
 							</p>
 						</div>
 						<div>
-							<p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+							<p className="text-xs font-bold uppercase tracking-widest text-red-500">
 								Quick links
 							</p>
 							<ul className="mt-3 space-y-2 text-sm">
 								<li>
 									<Link
 										to="/services"
-										className="text-slate-700 hover:text-slate-900"
+										className="text-zinc-300 hover:text-[var(--color-accent)]"
 									>
-										Recovery programs
+										Collection packages
 									</Link>
 								</li>
 								<li>
 									<Link
 										to="/compliance"
-										className="text-slate-700 hover:text-slate-900"
+										className="text-zinc-300 hover:text-[var(--color-accent)]"
 									>
-										Consumer rights
+										What we will not do (officially)
 									</Link>
 								</li>
 								<li>
 									<Link
 										to="/contact"
-										className="text-slate-700 hover:text-slate-900"
+										className="text-zinc-300 hover:text-[var(--color-accent)]"
 									>
-										Contact us
+										Hire us
 									</Link>
 								</li>
 							</ul>
 						</div>
 						<div>
-							<p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-								Hours
+							<p className="text-xs font-bold uppercase tracking-widest text-red-500">
+								London office
 							</p>
-							<p className="mt-3 text-sm text-slate-600">
-								Mon–Thu: 8:00 a.m. – 8:00 p.m. ET
+							<p className="mt-3 text-sm text-zinc-400">
+								The Leather Market
 								<br />
-								Fri: 8:00 a.m. – 6:00 p.m. ET
+								11–13 Weston Street
+								<br />
+								London SE1 3ER
+								<br />
+								<span className="text-zinc-500">United Kingdom</span>
+							</p>
+							<p className="mt-4 text-xs text-zinc-500">
+								Mon–Fri: 8:00–20:00 · Sat: 9:00–14:00{" "}
+								<span className="text-red-400/90">(GMT / BST)</span>
 							</p>
 						</div>
 					</div>
-					<div className="mt-10 flex flex-col gap-2 border-t border-slate-100 pt-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+					<div className="mt-10 flex flex-col gap-2 border-t border-red-950 pt-8 text-xs text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
 						<p>
-							© {new Date().getFullYear()} National Credit Recovery. All
-							rights reserved.
+							© {new Date().getFullYear()} Pay Up or Get Shot. All rights
+							reserved.
 						</p>
-						<p className="text-slate-400">
-							Fictional brand · Not a licensed debt collector
+						<p className="text-red-600/90">
+							We will send the boys round—tube, train, or Transit. Pay on time.
 						</p>
 					</div>
 				</div>
