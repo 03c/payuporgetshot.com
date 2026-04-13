@@ -2,11 +2,11 @@ import type { Route } from "./+types/about";
 
 export function meta({}: Route.MetaArgs) {
 	return [
-		{ title: "About Us | National Credit Recovery" },
+		{ title: "About | Pay Up or Get Shot" },
 		{
 			name: "description",
 			content:
-				"Learn about National Credit Recovery's leadership philosophy, client focus, and commitment to professional receivables management.",
+				"Pay Up or Get Shot: who we are and why we do not tolerate unpaid debt.",
 		},
 	];
 }
@@ -14,46 +14,52 @@ export function meta({}: Route.MetaArgs) {
 export default function About(_: Route.ComponentProps) {
 	return (
 		<div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
-			<p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+			<p className="text-xs font-black uppercase tracking-[0.3em] text-red-500">
 				About
 			</p>
-			<h1 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-				A partner to credit and finance teams
+			<h1 className="mt-2 font-display text-4xl tracking-wide text-white sm:text-5xl">
+				We exist because people steal with a smile
 			</h1>
-			<p className="mt-6 text-base leading-relaxed text-slate-600">
-				National Credit Recovery was established to give creditors a single,
-				accountable partner for late-stage receivables—without sacrificing the
-				controls your regulators and customers expect.
+			<p className="mt-6 text-base font-medium leading-relaxed text-zinc-400">
+				Pay Up or Get Shot was built for creditors who are done being treated like
+				a charity. You extended credit, delivered goods, or did the work. They
+				owe you. If they think silence and avoidance are free, we charge them
+				interest in stress until the account is settled.
 			</p>
-			<div className="mt-10 space-y-8 text-sm leading-relaxed text-slate-600">
+			<div className="mt-10 space-y-8 text-sm font-medium leading-relaxed text-zinc-400">
 				<section>
-					<h2 className="font-serif text-lg font-semibold text-slate-900">
-						Our approach
+					<h2 className="font-display text-2xl tracking-wide text-[var(--color-accent)]">
+						Our method
 					</h2>
 					<p className="mt-3">
-						We combine disciplined workflows with technology-enabled
-						oversight. Every account is tracked in a unified system of record,
-						so your organization can reconcile outcomes, fees, and consumer
-						interactions on demand.
+						We combine relentless follow-through with a clear escalation ladder.
+						Every case is tracked. Every contact is logged. When we say we will
+						send the boys round, there is a roster and a schedule—not a bluff.
 					</p>
 				</section>
 				<section>
-					<h2 className="font-serif text-lg font-semibold text-slate-900">
-						Leadership & governance
+					<h2 className="font-display text-2xl tracking-wide text-red-500">
+						Leadership
 					</h2>
 					<p className="mt-3">
-						Executive oversight includes monthly business reviews, vendor risk
-						assessments, and documented corrective action when metrics fall
-						outside agreed tolerances—supporting your third-party risk
-						management programs.
+						Executive oversight means we review outcomes weekly: recovery rates,
+						escalations, and whether debtors are still pretending they “never got
+						the invoice.” If your portfolio is bleeding, we tighten the screws
+						until the bleeding stops.
 					</p>
 				</section>
-				<section className="rounded-lg border border-amber-200/80 bg-amber-50/50 p-4 text-amber-950">
-					<p className="text-sm font-medium">Disclaimer</p>
+				<section className="rounded-lg border-2 border-red-800 bg-red-950/30 p-4 text-red-100">
+					<p className="font-display text-lg tracking-wide text-[var(--color-accent)]">
+						Final word
+					</p>
 					<p className="mt-2">
-						This organization and website are fictional and created for
-						demonstration only. No debt collection services are offered or
-						performed.
+						Owing someone money and ignoring them is a choice. We make that
+						choice expensive—in time, in peace of mind, and in whatever tier of
+						pressure you authorize.{" "}
+						<strong className="text-white">
+							Sleep with one eye open is what we tell the people who owe you—not
+							you.
+						</strong>
 					</p>
 				</section>
 			</div>
