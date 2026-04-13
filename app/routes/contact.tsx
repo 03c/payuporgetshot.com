@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
 		{
 			name: "description",
 			content:
-				"Contact Pay Up or Get Shot to open a debt recovery case and select your collection package.",
+				"Contact Pay Up or Get Shot in London to open a UK debt recovery case and select your collection package.",
 		},
 	];
 }
@@ -26,7 +26,8 @@ export default function Contact(_: Route.ComponentProps) {
 						Use this form to brief us on the debt, the debtor, and how aggressive
 						you want us to be.{" "}
 						<strong className="text-zinc-200">
-							The more detail you give, the faster we move.
+							The more detail you give—the Companies House number, the last
+							known postcode, the invoice in pounds—the faster we move.
 						</strong>{" "}
 						If they have been dodging you, assume they will try to dodge us—we
 						plan for that.
@@ -34,20 +35,44 @@ export default function Contact(_: Route.ComponentProps) {
 					<dl className="mt-10 space-y-4 text-sm">
 						<div>
 							<dt className="font-bold uppercase tracking-wide text-red-500">
-								Phone
+								Phone (UK)
 							</dt>
-							<dd className="mt-1 font-medium text-zinc-300">(800) 555-0198</dd>
+							<dd className="mt-1 font-medium text-zinc-300">
+								<a
+									href="tel:+442071234567"
+									className="hover:text-[var(--color-accent)]"
+								>
+									+44 20 7123 4567
+								</a>
+							</dd>
 						</div>
 						<div>
 							<dt className="font-bold uppercase tracking-wide text-red-500">
-								Office
+								Email
 							</dt>
 							<dd className="mt-1 font-medium text-zinc-300">
-								1200 Commerce Plaza
+								<a
+									href="mailto:collections@payuporgetshot.co.uk"
+									className="hover:text-[var(--color-accent)]"
+								>
+									collections@payuporgetshot.co.uk
+								</a>
+							</dd>
+						</div>
+						<div>
+							<dt className="font-bold uppercase tracking-wide text-red-500">
+								Registered office
+							</dt>
+							<dd className="mt-1 font-medium text-zinc-300">
+								Pay Up or Get Shot Ltd
 								<br />
-								Suite 400
+								The Leather Market
 								<br />
-								Wilmington, DE 19801
+								11–13 Weston Street
+								<br />
+								London SE1 3ER
+								<br />
+								United Kingdom
 							</dd>
 						</div>
 					</dl>
@@ -97,7 +122,7 @@ export default function Contact(_: Route.ComponentProps) {
 								htmlFor="company"
 								className="block text-sm font-bold text-zinc-200"
 							>
-								Organization
+								Organisation
 							</label>
 							<input
 								id="company"
@@ -118,7 +143,7 @@ export default function Contact(_: Route.ComponentProps) {
 								id="message"
 								name="message"
 								rows={4}
-								placeholder="Amount owed, debtor name, last known address, what they have tried so far…"
+								placeholder="Amount in GBP, debtor name, Companies House number if Ltd, last known UK postcode, what you have tried so far…"
 								className="mt-1.5 w-full rounded-md border-2 border-zinc-700 bg-black px-3 py-2 text-sm text-white placeholder:text-zinc-600 shadow-inner focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/40"
 							/>
 						</div>
@@ -130,7 +155,8 @@ export default function Contact(_: Route.ComponentProps) {
 						</button>
 						<p className="text-xs text-zinc-500">
 							Submission acknowledges you want recovery action and understand
-							escalation is part of the service.
+							escalation is part of the service. UK law applies; we operate from
+							England and Wales unless agreed otherwise.
 						</p>
 					</form>
 				</div>

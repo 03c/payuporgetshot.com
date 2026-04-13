@@ -33,7 +33,7 @@ export default function SiteLayout(_: Route.ComponentProps) {
 								Pay Up or Get Shot
 							</p>
 							<p className="text-[10px] font-bold uppercase tracking-[0.35em] text-red-400">
-								Debt recovery · No excuses
+								UK debt recovery · No excuses
 							</p>
 						</div>
 					</div>
@@ -70,8 +70,9 @@ export default function SiteLayout(_: Route.ComponentProps) {
 								Pay Up or Get Shot
 							</p>
 							<p className="mt-2 max-w-md text-sm leading-relaxed text-zinc-400">
-								We collect what you are owed. If someone owes you money and
-								they think they can ignore you, they are wrong.{" "}
+								We collect what you are owed from deadbeats across England,
+								Scotland, Wales, and Northern Ireland. If they think a UK
+								invoice is optional, they are wrong.{" "}
 								<span className="font-semibold text-red-400">
 									Sleep with one eye open is not a metaphor here.
 								</span>
@@ -110,14 +111,20 @@ export default function SiteLayout(_: Route.ComponentProps) {
 						</div>
 						<div>
 							<p className="text-xs font-bold uppercase tracking-widest text-red-500">
-								Office hours
+								London office
 							</p>
 							<p className="mt-3 text-sm text-zinc-400">
-								Mon–Thu: 8:00 a.m. – 8:00 p.m. ET
+								The Leather Market
 								<br />
-								Fri: 8:00 a.m. – 6:00 p.m. ET
+								11–13 Weston Street
 								<br />
-								<span className="text-red-400">Weekends: emergencies only.</span>
+								London SE1 3ER
+								<br />
+								<span className="text-zinc-500">United Kingdom</span>
+							</p>
+							<p className="mt-4 text-xs text-zinc-500">
+								Mon–Fri: 8:00–20:00 · Sat: 9:00–14:00{" "}
+								<span className="text-red-400/90">(GMT / BST)</span>
 							</p>
 						</div>
 					</div>
@@ -127,7 +134,7 @@ export default function SiteLayout(_: Route.ComponentProps) {
 							reserved.
 						</p>
 						<p className="text-red-600/90">
-							We will send the boys round. Pay on time.
+							We will send the boys round—tube, train, or Transit. Pay on time.
 						</p>
 					</div>
 				</div>

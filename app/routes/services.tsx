@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
 		{
 			name: "description",
 			content:
-				"Tiered debt recovery from Pay Up or Get Shot: from firm reminders to physical persuasion packages.",
+				"UK tiered debt recovery from Pay Up or Get Shot: from firm reminders to physical persuasion packages.",
 		},
 	];
 }
@@ -22,19 +22,19 @@ const programs: {
 		tag: "Soft opening",
 		tagClass:
 			"border-yellow-600/80 bg-yellow-500/10 text-[var(--color-accent)]",
-		body: "Structured calls and letters. We tell your debtor the clock is ticking. If they think they can ghost you, they learn otherwise—politely at first, then less politely. No broken bones yet; just broken excuses.",
+		body: "Structured calls and letters on UK letterhead. We tell your debtor the clock is ticking—CCJs and county court routes are on the table if they keep stalling. If they think they can ghost you from a bedsit in Leeds, they learn otherwise—politely at first, then less politely. No broken bones yet; just broken excuses.",
 	},
 	{
 		title: "Tier 2 — The Squeeze",
 		tag: "We send the boys",
 		tagClass: "border-orange-600/80 bg-orange-950/50 text-orange-300",
-		body: "In-person visits. Escalating frequency. We park where they see us. We knock when they wish we would not. Neighbors start asking questions. That is the point. Pay the debt or live under scrutiny.",
+		body: "In-person visits across Britain. Escalating frequency. We park where they see us—on the estate, outside the pub, by the trading estate gate. We knock when they wish we would not. Neighbours start asking questions. That is the point. Pay the debt or live under scrutiny.",
 	},
 	{
 		title: "Tier 3 — Leg Breaker",
 		tag: "Physical persuasion",
 		tagClass: "border-red-600 bg-red-950/60 text-red-300",
-		body: "When words fail, we apply pressure—literally. A visit that ends with them unable to walk straight is a visit they remember when the next payment is due. Medical bills are extra; your recovery is the priority.",
+		body: "When words fail, we apply pressure—literally. A visit that ends with them unable to walk straight is a visit they remember when the next payment is due. NHS or private A&E is their problem; your recovery in pounds is the priority.",
 	},
 	{
 		title: "Tier 4 — Total Recovery",

@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
 		{
 			name: "description",
 			content:
-				"How Pay Up or Get Shot handles disputes, communications, and escalation boundaries.",
+				"How Pay Up or Get Shot handles UK disputes, communications, and escalation boundaries.",
 		},
 	];
 }
@@ -35,9 +35,9 @@ export default function Compliance(_: Route.ComponentProps) {
 					</h2>
 					<p className="mt-3">
 						If a debtor claims the debt is wrong, we route it to review—fast.
-						Documentation gets compared to your files. If they are lying to buy
-						time, we document that too. Valid disputes get fixed; bogus ones get
-						pressure until payment or proof.
+						Documentation gets compared to your files and any UK court paperwork.
+						If they are lying to buy time, we document that too. Valid disputes
+						get fixed; bogus ones get pressure until payment or proof.
 					</p>
 				</section>
 				<section>
@@ -46,8 +46,9 @@ export default function Compliance(_: Route.ComponentProps) {
 					</h2>
 					<p className="mt-3">
 						We track consent, do-not-contact flags, and channel preferences so
-						we do not hand your debtor a harassment lawsuit on a silver platter.
-						We can still be relentless inside the rules—just smarter relentless.
+						we do not hand your debtor a harassment claim in the County Court on a
+						silver platter. We can still be relentless inside the rules—just
+						smarter relentless.
 					</p>
 				</section>
 				<section>
@@ -64,7 +65,8 @@ export default function Compliance(_: Route.ComponentProps) {
 				</section>
 				<p className="rounded-md border border-zinc-700 bg-zinc-900/80 p-4 text-xs text-zinc-500">
 					This page describes operational intent, not legal advice. Retain
-					counsel if you need jurisdiction-specific guidance.
+					English or Scottish counsel if you need jurisdiction-specific guidance
+					within the UK.
 				</p>
 			</div>
 		</div>

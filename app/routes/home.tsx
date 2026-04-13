@@ -1,5 +1,7 @@
 import { Link } from "react-router";
 
+import { ThreatGallery } from "~/components/threat-gallery";
+
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
@@ -10,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
 		{
 			name: "description",
 			content:
-				"Pay Up or Get Shot: professional debt collection with escalating packages. If they do not pay, they will wish they had.",
+				"Pay Up or Get Shot: UK debt recovery with escalating packages. If they do not pay, they will wish they had.",
 		},
 	];
 }
@@ -45,11 +47,12 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 							</span>
 						</h1>
 						<p className="mt-6 text-base font-medium leading-relaxed text-zinc-300 sm:text-lg">
-							You gave them trust. They gave you silence. We give them a reason
-							to find their wallet.{" "}
+							You gave them trust. They gave you radio silence from a flat in
+							Manchester or a Ltd company registered at Companies House. We give
+							them a reason to find their wallet—in pounds, not fairy tales.{" "}
 							<strong className="text-white">
 								If they do not pay, they will learn what “we will send the boys
-								round” actually means.
+								round” actually means on this island.
 							</strong>{" "}
 							Sleep with one eye open is advice we give to debtors—not to you.
 						</p>
@@ -71,6 +74,8 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 				</div>
 			</section>
 
+			<ThreatGallery />
+
 			<section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
 				<div className="grid gap-6 lg:grid-cols-3">
 					<div className="rounded-xl border-2 border-red-900/80 bg-gradient-to-b from-zinc-900 to-black p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
@@ -78,9 +83,9 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 							We find them
 						</h2>
 						<p className="mt-3 text-sm font-medium leading-relaxed text-zinc-400">
-							They moved. They blocked your number. They pretend they never heard
-							of you. We do not care. Your money is not a suggestion—it is a
-							debt, and we treat it like one.
+							They moved from Brum to Bristol. They blocked your mobile. They
+							ghost you on WhatsApp. We do not care. Your invoice is not a
+							suggestion—it is a debt, and we treat it like one.
 						</p>
 					</div>
 					<div className="rounded-xl border-2 border-red-900/80 bg-gradient-to-b from-zinc-900 to-black p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
@@ -128,9 +133,9 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 					</div>
 					<ul className="mt-8 grid flex-1 gap-3 text-sm font-medium text-zinc-300 lg:mt-0">
 						{[
-							"No more “I will pay next week.” Next week already happened.",
-							"If they hide, we escalate. If they run, we follow the trail you paid for.",
-							"You stay clean. We stay relentless. They stay nervous.",
+							"No more “I will pay next week.” Next week already happened—and the Bank Holiday does not count.",
+							"If they hide in a new postcode, we escalate. If they run, we follow the trail you paid for.",
+							"You stay clean for HMRC. We stay relentless. They stay nervous on every night bus home.",
 						].map((item) => (
 							<li
 								key={item}
@@ -156,8 +161,8 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 							</h2>
 							<p className="mt-2 text-sm font-medium text-zinc-400">
 								Tell us who owes you and how hard you want us to squeeze. We
-								respond within one business day—faster if the situation is
-								urgent.
+								respond within one UK business day—faster if the situation is
+								urgent or they are about to dissolve the company.
 							</p>
 						</div>
 						<Link

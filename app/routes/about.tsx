@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
 		{
 			name: "description",
 			content:
-				"Pay Up or Get Shot: who we are and why we do not tolerate unpaid debt.",
+				"Pay Up or Get Shot: UK debt recovery—who we are and why we do not tolerate unpaid invoices.",
 		},
 	];
 }
@@ -21,10 +21,11 @@ export default function About(_: Route.ComponentProps) {
 				We exist because people steal with a smile
 			</h1>
 			<p className="mt-6 text-base font-medium leading-relaxed text-zinc-400">
-				Pay Up or Get Shot was built for creditors who are done being treated like
-				a charity. You extended credit, delivered goods, or did the work. They
-				owe you. If they think silence and avoidance are free, we charge them
-				interest in stress until the account is settled.
+				Pay Up or Get Shot was built for UK creditors who are done being treated
+				like a charity. You extended credit, delivered goods, or did the work.
+				They owe you—in sterling, not stories. If they think a Ltd shell and a
+				dodgy director at Companies House will save them, we disabuse them of
+				that—firmly.
 			</p>
 			<div className="mt-10 space-y-8 text-sm font-medium leading-relaxed text-zinc-400">
 				<section>
@@ -44,8 +45,8 @@ export default function About(_: Route.ComponentProps) {
 					<p className="mt-3">
 						Executive oversight means we review outcomes weekly: recovery rates,
 						escalations, and whether debtors are still pretending they “never got
-						the invoice.” If your portfolio is bleeding, we tighten the screws
-						until the bleeding stops.
+						the invoice” or “the BACS failed.” If your ledger is bleeding VAT and
+						cashflow, we tighten the screws until the bleeding stops.
 					</p>
 				</section>
 				<section className="rounded-lg border-2 border-red-800 bg-red-950/30 p-4 text-red-100">
